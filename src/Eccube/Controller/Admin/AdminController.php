@@ -145,9 +145,9 @@ class AdminController extends AbstractController
             $request
         );
         $this->eventDispatcher->dispatch(EccubeEvents::ADMIN_ADMIM_LOGIN_INITIALIZE, $event);
-
+        
         $form = $builder->getForm();
-
+dd(0);
         return [
             'error' => $this->helper->getLastAuthenticationError(),
             'form' => $form->createView(),
